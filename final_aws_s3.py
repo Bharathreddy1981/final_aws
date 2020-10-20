@@ -11,7 +11,7 @@ def bun():
     ACCESS_SECRET_KEY = "kPbUYhXfzx1JYcdrWuJdG5YEfsNchconnDqXqa/f"
     BUCKET_NAME = "flask121"
 
-    data = open("C:\Users/vanga\Desktop\shiva.jpg", 'rb')
+    data = open("C:\Users\vanga\Desktop\shiva.jpg", 'rb')
 
     s3 = boto3.resource(
         "s3",
