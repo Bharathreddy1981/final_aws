@@ -1,4 +1,4 @@
-from flask import Flask,jsonify
+from flask import Flask
 import logging
 import boto3
 from botocore.exceptions import ClientError
@@ -22,7 +22,7 @@ def create_presigned_url():
     )
     my_bucket = s3_client.Bucket('flask121')
 
-    list= []
+    #list= []
     for file in my_bucket.objects.all():
         value = file.key
         # print(a)
@@ -48,9 +48,11 @@ def create_presigned_url():
             return None
 
 
-        list.append({value: response})
+        #list.append({value: response})
 
-    return jsonify(list)
+    return  response
+
+
 
 
 if __name__=="__main__":
