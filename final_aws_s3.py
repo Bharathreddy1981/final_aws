@@ -6,12 +6,12 @@ final_aws = Flask(__name__)
 
 @final_aws.route("/aws", methods=["POST"])
 def bun():
-    data = request.get_json()
+    value = request.get_json()
     ACCESS_KEY_ID = "AKIAZNN5NBT72GR3NKP7"
     ACCESS_SECRET_KEY = "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"
     BUCKET_NAME = "flask121"
 
-    data = open(data["image"], 'rb')
+    data = open(value["image"], 'rb')
 
     s3 = boto3.resource(
         "s3",
