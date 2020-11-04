@@ -4,10 +4,10 @@ import boto3
 from botocore.exceptions import ClientError
 from botocore.client import Config
 
-aws_get_totoal_url_0000 = Flask(__name__)
+aws_get_total_url_0000 = Flask(__name__)
 
 
-@aws_get_totoal_url_0000.route("/last", methods=["GET"])
+@aws_get_total_url_0000.route("/last", methods=["GET"])
 
 def create_presigned_url():
     ACCESS_KEY_ID = "AKIAZNN5NBT72GR3NKP7"
@@ -54,4 +54,4 @@ def create_presigned_url():
 
 
 if __name__=="__main__":
-    aws_get_totoal_url_0000.run(host='0.0.0.0')
+    aws_get_total_url_0000.run(host='0.0.0.0')
